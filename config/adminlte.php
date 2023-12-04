@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => 'Painel de <b>Gestão</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/aracruz.png',
+    'logo_img' => 'vendor/adminlte/dist/img/icon.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
