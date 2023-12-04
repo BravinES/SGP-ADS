@@ -225,11 +225,6 @@ return [
 
     'menu' => [
             [
-                'text'      => 'Dashboard',
-                'url'       => '/',
-                'icon'      => 'fas fa-tachometer-alt',
-            ],
-            [
                 'text'      => 'Projetos',
                 'icon'      => 'fas fa-columns',
                 'url'       => '/projetos',
