@@ -236,12 +236,7 @@ return [
             ],
 
 
-        ['header' => 'Configurações de contas', 'can' => ['account_settings_menu', 'account_settings_users_profile_menu']],
-        [
-            'text' => 'profile',
-            'url'  => 'users/profile',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+        
         [
             'text' => 'Senha',
             'url'  => 'password/reset',
