@@ -1,0 +1,14 @@
+.card-top-receitas {
+    min-height: 130px;
+}
+
+.callout.callout-dark {
+    border-left-color: #343a40;
+    color: #343a40;
+}
+
+.card-body.sun-chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,239 @@
+.year {
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 0px;
+}
+
+div.year .btn-year {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    margin-top: 5px;
+}
+
+div.year .list-year {
+    max-height: 280px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+div.year.year-hover:hover .list-year {
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+
+div.year .list-year ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+div.year .list-year ul li {
+    list-style: none;
+    text-align: center;
+    min-width: 90px;
+    padding: 8px 4px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+div.year .list-year ul li:last-child {
+    margin-bottom: 0px;
+}
+
+div.year .list-year ul li:hover {
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+div.year .list-year ul li:active {
+    opacity: 0.4;
+}
+
+.card-top {
+    min-height: 190px;
+}
+
+.callout.callout-dark {
+    border-left-color: #343a40;
+    color: #343a40;
+}
+
+.bg-card-light {
+    background-color: #f8f9fa;
+}
+
+.card-top .inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-top .inner .card-title {
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-top .inner .card-infor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.card-top .inner .card-infor .description {
+    font-size: 1.3rem;
+}
+
+.card-top .inner .card-infor .dados {
+    font-size: 1.6rem;
+}
+
+.card-top.bg-card-light .inner .card-infor .description {
+    font-size: 1.5rem;
+}
+
+.card-top.bg-card-light .inner .card-title {
+    font-size: 2.2rem;
+}
+
+.card-top.bg-card-light .inner .card-infor .dados {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-top .inner .card-infor.card-total .description {
+    font-size: 1.4rem;
+}
+
+.card-top .inner .card-infor.card-total .dados {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+#filtroReceitas .card-filtro-graficos {
+    width: 100%;
+}
+
+#filtroReceitas .card-filtro-graficos ul.list-filter {
+    list-style: none;
+    padding: 0px;
+}
+#filtroReceitas .card-filtro-graficos ul.list-filter li {
+    width: 100%;
+    display: block;
+}
+#filtroReceitas .card-filtro-graficos ul.list-filter li label {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0;
+    color: #343a40;
+    border: 2px solid #343a40;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    user-select: none;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+#filtroReceitas .card-filtro-graficos ul.list-filter li label {
+    width: 100%;
+    padding: 0px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#filtroReceitas .card-filtro-graficos ul.list-filter li label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    padding: 2px 6px 2px 2px;
+    content: "\f067";
+    transition: transform 0.3s ease-in-out;
+}
+
+#filtroReceitas
+    .card-filtro-graficos
+    ul.list-filter
+    li
+    input[type="checkbox"]:checked
+    + label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+#filtroReceitas
+    .card-filtro-graficos
+    ul.list-filter
+    li
+    input[type="checkbox"]:checked
+    + label {
+    background-color: #007bff;
+    color: #fff;
+    transition: all 0.2s;
+    border: 2px solid #007bff;
+}
+
+#filtroReceitas .card-filtro-graficos ul.list-filter li input[type="checkbox"] {
+    display: absolute;
+}
+#filtroReceitas .card-filtro-graficos ul.list-filter li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+#filtroReceitas
+    .card-filtro-graficos
+    ul.list-filter
+    li
+    input[type="checkbox"]:focus
+    + label {
+    border: 2px solid #5aaaff;
+}
+
+/* loading */
+.loading {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

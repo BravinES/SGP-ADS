@@ -1,0 +1,689 @@
+/* Bootstrap */
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    display: block;
+}
+
+.input-group-text.icon-project {
+    border: 0;
+    border-top: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+    background-color: #FFF;
+}
+
+.input-group.input-project input {
+    border: 0;
+    border-top: 1px solid #ced4da;
+    border-left: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+}
+
+.board-item .btn {
+    padding: 4px;
+}
+
+/* General */
+#board-container {
+    background-color: #FFF;
+    color: #eee;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-main {
+    font-size: 18px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-main .title {
+    height: 50px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #444A;
+
+    display: flex;
+    align-items: space-between;
+}
+
+.nav-main .title .title-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-main .title .title-right{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.painel-name {
+    height: 50px;
+    background-color: transparent;
+    font-size: 1.3rem;
+    display: flex;
+}
+
+.painel-name .board-header-btn {
+    background-color: #8888;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin: 8px
+}
+
+#board-container .board-content {
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+#board-container .board-content.list-boards {
+    padding-right: 10px;
+    overflow: auto;
+}
+
+/* Home board */
+#board-container .board-content .boards {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#board-container .board-content .boards .boards-title {
+    color: #5e6c84;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#board-container .board-content .boards .boards-title h3 {
+    padding: 0;
+    margin: 0 0 0 4px;
+    font-size: 18px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#board-container .board-content .boards .boards-content .boards-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+#board-container .board-content .boards .boards-content .boards-list .board-item-content{
+    position: relative;
+    z-index: 1;
+    transition: all .2s ease-in-out;
+    list-style: none;
+}
+
+
+#board-container .board-content .boards .boards-content .boards-list .board-item-content:hover {
+    transform: scale(1.02);
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item-content .ball-notification {
+    position: absolute;
+    top: -12px;
+    right: 9px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item {
+    width: 480px;
+    height: 220px;
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFF;
+
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    border: 7px solid;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+
+#board-container .board-content .boards .boards-content .boards-list .board-item:hover {
+    opacity: 0.7;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item:active {
+    opacity: 0.4;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item .bg-notification {
+    width: 100%;
+    height: 42px;
+    background-color: #f00;
+    color: #FFFFFF;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item .project-card-heard {
+    display: flex;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item .bg-full-percent {
+    height: 100%;
+    opacity: 0.2;
+    display: flex;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item a {
+    width: 200%;
+    height: 200%;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item a .project-card-heard {
+    display: flex;
+    flex-direction: row;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item a .project-card-heard .project-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item a .project-card-heard .project-card-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-left: 8px;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item a .project-card-heard .project-card-title span {
+    word-wrap: break-word;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item a .project-card-body {
+    color: #333;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 10px;
+    margin-left: 42px;
+}
+
+
+
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty {
+    background-color: transparent;
+    border: 2px dashed #3334;
+    transition: ease 0.3s;
+    box-shadow: 0 0 0px rgb(0 0 0 / 13%), 0 0 300px rgb(0 0 0 / 20%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty:hover {
+    background-color: #3333;
+    border: 2px dashed transparent;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty button {
+    flex: 1;
+    background-color: transparent;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty i.icon-hover {
+    display: none;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty:hover i.icon-hover {
+    display: block;
+    font-size: 48px;
+    color: #3338;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty .card-empty-text {
+    margin: 8px 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333A;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+}
+
+#board-container .board-content .boards .boards-content .boards-list .board-item.card-empty:hover .card-empty-text {
+    display: none;
+}
+
+
+/* board task list*/
+#board-container .board-content .lists {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+    display: flex;
+}
+
+#board-container .board-content .lists::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+    width: 8px;
+}
+
+/* background of the scrollbar except button or resizer */
+#board-container .board-content .lists::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    border-radius: 8px;
+}
+
+/* scrollbar itself */
+#board-container .board-content .lists::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 8px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+#board-container .board-content .lists::-webkit-scrollbar-button {
+    display: none
+}
+
+
+#board-container .board-content .lists>* {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+#board-container .board-content .lists::after {
+    content: "";
+    flex: 0 0 10px;
+}
+
+#board-container .board-content .lists .list {
+    width: 300px;
+    height: calc(100% - 10px - 17px);
+}
+
+#board-container .board-content .lists .list>* {
+    background-color: #e2e4e6;
+    color: #333;
+}
+
+#board-container .board-content .lists .list #boardListTitle {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 10px;
+}
+
+#board-container .board-content .lists .list #boardListTitle .list-title {
+    width: 100%;
+    height: 100%;
+    margin: 4px;
+}
+
+#board-container .board-content .lists .list #boardListTitle .list-title .list-title-text {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#board-container .board-content .lists .list #boardListTitle .list-title input {
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: 0px;
+    padding: 0 4px;
+}
+
+#board-container .board-content .lists .list #boardListTitle .list-info .progress {
+    background-color: rgba(0, 0, 0, 0.125);
+    height: 3px;
+    margin: 5px 0;
+}
+
+#board-container .board-content .lists .list #boardListTitle .list-info .progress .progress-bar {
+    background-color: #FFF;
+}
+
+#board-container .board-content .lists .list footer{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#board-container .board-content .lists .list footer button{
+    width: 100%;
+    line-height: 36px;
+    color: #888;
+    cursor: pointer;
+}
+
+#board-container .board-content .lists .list footer button:hover {
+    background-color: #AAA8;
+
+}
+
+#board-container .board-content .lists .list footer button:active {
+    opacity: 0.4;
+}
+
+
+
+
+
+#board-container .board-content .lists .list .tasks-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    max-height: calc(100% - 36px - 36px);
+    overflow-y: auto;
+
+}
+
+
+#board-container .board-content .lists .list .tasks-list::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+    width: 8px;
+}
+
+/* background of the scrollbar except button or resizer */
+#board-container .board-content .lists .list .tasks-list::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    border-radius: 8px;
+}
+
+/* scrollbar itself */
+#board-container .board-content .lists .list .tasks-list::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 8px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+#board-container .board-content .lists .list .tasks-list::-webkit-scrollbar-button {
+    display: none
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item:hover {
+    background-color: #fff5;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-header .cover-img img {
+    display: block;
+    width: calc(100% + 2 * 10px);
+    margin: -10px 0 10px -10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-body .task-labels {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-body .task-labels .task-label {
+    max-width: 198px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 4px 4px 0;
+    padding: 1px 8px;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-body .task-content .task-title .task-number {
+    font-weight: 700;
+    color: #000;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-body .task-content .task-title .task-text {
+    font-weight: 600;
+    color: #444;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-body .task-content .task-description {
+    font-size: 14px;
+    color: #888;
+    word-wrap: break-word;
+
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer .task-badges {
+    /*Fazer alguma coisa aqui*/
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer .task-badges .badge {
+    cursor: pointer;
+    font-size: 14px;
+    transition: ease 0.2s;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer .task-badges .badge:hover {
+    opacity: 0.7;
+}
+
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer .task-members {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer .task-members .member img {
+    width: 32px;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+#board-container .board-content .lists .list .tasks-list .task-item .task-footer .task-members .member img:hover {
+    opacity: 0.7;
+}
+
+/*Nova lista */
+
+#board-container .board-content .lists .list.new-list {
+    height: 0;
+}
+
+#board-container .board-content .lists .list.new-list #boardListTitle {
+    border-radius: 5px;
+    color: #777 !important;
+    cursor: pointer;
+    background-color: #e2e4e675;
+    transition: ease 0.2s;
+}
+
+#board-container .board-content .lists .list.new-list #boardListTitle:hover {
+    color: #555 !important;
+    background-color: #e2e4e6AA;
+}
+
+#board-container .board-content .lists .list.new-list #boardListTitle:active {
+    opacity: 0.4;
+}
+
+#board-container .board-content .lists .list.new-list #boardListTitle:active {
+    opacity: 0.4;
+}
+
+#board-container .board-content .lists .list .card-body {
+    padding: 0;
+}
+
+#board-container .board-content .lists .list .card-body .form-group{
+    margin: 0;
+}
+
+#board-container .board-content .lists .list .card-footer {
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+}
+
+#board-container .board-content .lists .list .card-footer .close {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#board-container .board-content .lists .list .card-footer .close i {
+    margin-right: 4px;
+}
+
+#board-container .board-content .lists .list .card-body .form-group{
+    margin: 8px 0;
+    background-color: transparent;
+    border: 0;
+}
+
+
+/*------------*/
+
+#modalNewProject .modal-body form .color-box ul.color-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item {
+    width: 38px;
+    height: 38px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    list-style: none;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    color: #fff !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item label i {
+    z-index: 2;
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item:hover {
+    opacity: 0.85;
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item.imgBg {
+    width: 82px;
+    height: 54px;
+
+}
+
+#modalNewProject .modal-body form .color-box ul.color-list li.color-item.imgBg img {
+    width: 82px;
+    height: 54px;
+    position: absolute;
+    z-index: 1;
+}
+
+#modalTask .modal-dialog .modal-content .modal-body form .aside-right {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#modalTask .modal-dialog .modal-content .modal-body form .input-task {
+    margin: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#modalTask .modal-dialog .modal-content .modal-body form .task-progress {
+    margin: 20px 4px;
+}
