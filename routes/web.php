@@ -13,12 +13,12 @@ use App\Http\Controllers\Actions\BoardMemberController;
 use App\Http\Controllers\Actions\CommentController;
 use App\Http\Controllers\Actions\TaskController;
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/', [ActionsController::class, 'index'])->name('dashboard');
 Route::get('info', function () {
     return phpinfo();
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [ActionsController::class, 'index']);
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
